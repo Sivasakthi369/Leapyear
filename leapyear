@@ -1,0 +1,33 @@
+public class Leapyr{
+	
+	public static void isLeapyr(int year){
+		boolean Leap_year = true;
+		if(year%4==0){
+			if(year%100==0){
+				if(year%400==0){
+					Leap_year = true;
+				}
+				else{
+					Leap_year = false;
+					}
+			}
+		}
+		else{
+			Leap_year = false;
+		}
+		
+		
+		if(Leap_year){
+			System.out.println("The year " +year+ " is leap year.");
+		}
+		else{
+			System.out.println("The year " +year+ " is not leap year.");
+		}
+	}
+	
+	public static void main(String[]args){
+		isLeapyr(1900);
+		isLeapyr(2004);
+	}
+	
+}
